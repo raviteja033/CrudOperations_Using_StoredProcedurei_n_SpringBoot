@@ -1,0 +1,48 @@
+DELIMITER $$
+ 
+CREATE PROCEDURE InsertEmployee(IN fname VARCHAR(100), IN lname VARCHAR(100))
+BEGIN
+    INSERT INTO employees (efname, elname) VALUES (fname, lname);
+END $$
+ 
+DELIMITER ;
+ 
+ 
+DELIMITER $$
+ 
+CREATE PROCEDURE GetAllEmployees()
+BEGIN
+    SELECT * FROM employees;
+END $$
+ 
+DELIMITER ;
+ 
+ 
+DELIMITER $$
+ 
+CREATE PROCEDURE GetEmployeeById(IN empId INT)
+BEGIN
+    SELECT * FROM employees WHERE eid = empId;
+END $$
+ 
+DELIMITER ;
+ 
+ 
+DELIMITER $$
+ 
+CREATE PROCEDURE UpdateEmployee(IN empId INT, IN fname VARCHAR(100), IN lname VARCHAR(100))
+BEGIN
+    UPDATE employees SET efname = fname, elname = lname WHERE eid = empId;
+END $$
+ 
+DELIMITER ;
+ 
+ 
+DELIMITER $$
+ 
+CREATE PROCEDURE DeleteEmployee(IN empId INT)
+BEGIN
+    DELETE FROM employees WHERE eid = empId;
+END $$
+ 
+DELIMITER ;
