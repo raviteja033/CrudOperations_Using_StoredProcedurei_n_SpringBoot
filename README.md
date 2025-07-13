@@ -1,4 +1,4 @@
-# CrudOperations_Using_StoredProcedurei_n_SpringBoot
+# CrudOperations_Using_StoredProcedure in_SpringBoot
 • Designed and integrated stored procedures for Create, Read, Update, and Delete (CRUD) operations 
    to improve performance and encapsulate business logic at the database level.
 
